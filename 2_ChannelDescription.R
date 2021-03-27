@@ -294,9 +294,9 @@ par(mfrow = c(2,2))
 
 #----- Panel A: Histogram -----
 # We consider log10 of subs
-logsubs <- na.omit(log10(channel_data$channel_subscribers))
+logsubs <- log10(channel_data$channel_subscribers)
 # Breaks for the histogram
-hbr <- seq(0, ceiling(max(logsubs)), by = 1)
+hbr <- seq(0, ceiling(max(logsubs, na.rm = T)), by = 1)
 # Compute histogram
 hsub_indiv <- hist(logsubs[!is_institution], breaks = hbr, plot = F)
 hsub_inst <- hist(logsubs[is_institution], breaks = hbr, plot = F)
