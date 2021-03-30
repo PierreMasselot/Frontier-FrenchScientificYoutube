@@ -307,8 +307,8 @@ plot(hsub_indiv, col = adjustcolor(4, .5), freq = F, border = "white",
   main = "Subscriber histogram", xlab = "Number of subscribers", 
   ylab = "Proportion (%)"
 )
-plot(hsub_inst, col = adjustcolor(2, .5), freq = F, add = T, border = "white")
-axis(1, at = hbr, labels = 10^hbr)
+plot(hsub_inst, col = adjustcolor(2, .5), freq = F, add = T, border = "white",)
+axis(1, at = hbr, labels = 10^hbr, cex.axis = .9)
 axis(2, at = axTicks(2), labels = axTicks(2) * 100)
 text(par("usr")[1], par("usr")[4], "A", adj = c(2, -1.2), xpd = T, cex = 3)
 legend("topright", c("Individuals", "Institutions"),
